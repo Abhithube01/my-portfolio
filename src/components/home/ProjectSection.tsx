@@ -1,5 +1,6 @@
 import { useDarkMode } from "../contexts/DarkModeContext";
 import ProjectBox from "./ProjectBox";
+import weather from "../home/images/image.png"
 
 function ProjectSection() {
   const { isDarkMode } = useDarkMode();
@@ -9,16 +10,14 @@ function ProjectSection() {
       className="px-32 desktop:px-20 pt-80 laptop:pt-40 tablet:px-10 tablet:pt-[7.5rem]"
     >
       <h2
-        className={`text-[4.8rem] font-bold leading-[4.8rem] pb-10 font-ibarra text-center laptop:text-[3rem] laptop:leading-[3rem] laptop:pb-4 ${
-          isDarkMode ? "text-white" : "text-[#42446e]"
-        }`}
+        className={`text-[4.8rem] font-bold leading-[4.8rem] pb-10 font-ibarra text-center laptop:text-[3rem] laptop:leading-[3rem] laptop:pb-4 ${isDarkMode ? "text-white" : "text-[#42446e]"
+          }`}
       >
         Projects
       </h2>
       <h3
-        className={`text-[2rem] laptop:text-[1.6rem] leading-[2.6rem] text-center ${
-          isDarkMode ? "text-[#a7a7a7]" : "text-[#666]"
-        }`}
+        className={`text-[2rem] laptop:text-[1.6rem] leading-[2.6rem] text-center ${isDarkMode ? "text-[#a7a7a7]" : "text-[#666]"
+          }`}
       >
         Some of my works
       </h3>
@@ -32,8 +31,8 @@ function ProjectSection() {
           github="https://github.com/Abhithube01/Frontend-Quiz-App"
           techStack="React, Redux, Tailwind"
         />
-        <ProjectBox
-          img="/dist/image.png"
+       <ProjectBox
+          img={weather}
           title="Live Weather App"
           description="The Quiz Application offers a dynamic platform for creating and taking quizzes on various topics. With features like multiple-choice questions and score tracking, it provides an interactive and educational experience for users. Dive into the world of HTML, CSS, JavaScript, and accessibility as you test your knowledge across these four essential categories."
           url="https://abhithube01.github.io/live-weather-app/"
@@ -55,7 +54,7 @@ function ProjectSection() {
           url="https://hangman-game-abhinav.netlify.app/"
           github="https://github.com/Abhithube01/hangman-game-main"
           techStack="React, TypeScript, Tailwind, Framer"
-        /> 
+        />
       </div>
     </section>
   );
