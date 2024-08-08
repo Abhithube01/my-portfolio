@@ -1,7 +1,5 @@
 import { useDarkMode } from "../contexts/DarkModeContext";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 
 function HeroSection() {
   const { isDarkMode } = useDarkMode();
