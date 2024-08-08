@@ -43,29 +43,13 @@ function HeroSection() {
       </div>
 
       <div className="laptop:hidden">
-        <Slider {...settings}>
           <div>
             <img
-              src="./dist/port1.png"
+              src="./dist/hero-1.png"
               alt="image1"
               className="h-[60rem] w-full object-cover"
             />
           </div>
-          <div>
-            <img
-              src="./src/images/port3.jpg"
-              alt="image2"
-              className="h-[60rem] w-full object-cover"
-            />
-          </div>
-          <div>
-            <img
-              src="./src/images/port2.jpg"
-              alt="image3"
-              className="h-[60rem] w-full object-cover"
-            />
-          </div>
-        </Slider>
       </div>
     </section>
   );
