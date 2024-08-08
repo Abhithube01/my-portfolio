@@ -33,7 +33,7 @@ function ProjectSection() {
           techStack="React, Redux, Tailwind"
         />
         <ProjectBox
-          img="./src/images/image.png"
+          img="./image.png"
           title="Live Weather App"
           description="The Quiz Application offers a dynamic platform for creating and taking quizzes on various topics. With features like multiple-choice questions and score tracking, it provides an interactive and educational experience for users. Dive into the world of HTML, CSS, JavaScript, and accessibility as you test your knowledge across these four essential categories."
           url="https://abhithube01.github.io/live-weather-app/"
