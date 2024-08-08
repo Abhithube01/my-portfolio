@@ -46,14 +46,14 @@ function HeroSection() {
         <Slider {...settings}>
           <div>
             <img
-              src="./src/images/port1.jpg"
+              src="./dist/port1.png"
               alt="image1"
               className="h-[60rem] w-full object-cover"
             />
           </div>
           <div>
             <img
-              src="./src/images/port1.jpg"
+              src="./src/images/port3.jpg"
               alt="image2"
               className="h-[60rem] w-full object-cover"
             />
