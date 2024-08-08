@@ -1,8 +1,25 @@
 import { useDarkMode } from "../contexts/DarkModeContext";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import hero1 from "./images/port1.jpg";
+import hero2 from "./images/port2.jpg";
+import hero3 from "./images/port3.jpg";
 
 function HeroSection() {
   const { isDarkMode } = useDarkMode();
+
+  const settings = {
+    dots: true,
+    infinite: true,  // Enables smooth looping
+    speed: 800,  // Slower transition for smoothness
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    fade: true,  // Adds a fade effect for smoother transitions
+  };
+
   return (
     <section
       id="home"
@@ -29,13 +46,17 @@ function HeroSection() {
       </div>
 
       <div className="laptop:hidden">
+        <Slider {...settings}>
           <div>
-            <img
-              src="/hero-1.png"
-              alt="image1"
-              className="h-[60rem] w-full object-cover"
-            />
+            <img src={hero1} alt="image1" className="h-[60rem] w-full object-cover" />
           </div>
+          <div>
+            <img src={hero3} alt="image2" className="h-[60rem] w-full object-cover" />
+          </div>
+          <div>
+            <img src={hero2} alt="image3" className="h-[60rem] w-full object-cover" />
+          </div>
+        </Slider>
       </div>
     </section>
   );
