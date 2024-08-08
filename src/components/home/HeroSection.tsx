@@ -31,7 +31,7 @@ function HeroSection() {
       <div className="laptop:hidden">
           <div>
             <img
-              src="./dist/hero-1.png"
+              src="/hero-1.png"
               alt="image1"
               className="h-[60rem] w-full object-cover"
             />
