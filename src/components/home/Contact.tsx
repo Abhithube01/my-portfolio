@@ -25,7 +25,7 @@ function Contact() {
     emailjs
       .sendForm(
         "service_hpyvqbh", // Replace with your actual EmailJS service ID
-        "template_tqg08f9", // Replace with your actual EmailJS template ID
+        "template_rdtljf4", // Replace with your actual EmailJS template ID
         form.current!,
         "owYtxCmh05Y5_mtOP" // Replace with your actual EmailJS public key
       )
