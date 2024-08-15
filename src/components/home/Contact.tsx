@@ -1,4 +1,4 @@
-import { useForm } from "react-hook-form";
+import { useForm, SubmitHandler } from "react-hook-form";
 import { useDarkMode } from "../contexts/DarkModeContext";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
@@ -20,22 +20,26 @@ function Contact() {
 
   const form = useRef<HTMLFormElement>(null);
 
-  function onSubmitData() {
+  const onSubmitData: SubmitHandler<ContactState> = () => {
+    // No need to handle the event, just send the form data
     emailjs
-      .sendForm("service_hpyvqbh", "template_tqg08f9", form.current!, {
-        publicKey: "owYtxCmh05Y5_mtOP",
-      })
+      .sendForm(
+        "service_hpyvqbh", // Replace with your actual EmailJS service ID
+        "template_tqg08f9", // Replace with your actual EmailJS template ID
+        form.current!,
+        "owYtxCmh05Y5_mtOP" // Replace with your actual EmailJS public key
+      )
       .then(
         () => {
           toast.success("Your message has been sent");
           form.current!.reset();
         },
         (error) => {
-          console.log("FAILED...", error.text);
+          console.error("FAILED...", error);
           toast.error("There was an error sending your message.");
         }
       );
-  }
+  };
 
   const { isDarkMode } = useDarkMode();
   return (
